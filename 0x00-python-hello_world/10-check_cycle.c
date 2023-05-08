@@ -27,24 +27,25 @@ int list_size(listint_t *list)
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *temp = list, **check;
-	int l = 1, i;
+	listint_t *temp = list, *two, *two_t;
+	int count = 0, l = 0;
 
-	check = malloc(120 * sizeof(listint_t*));
-	check[0] = list;
-	check[120] = NULL;
+	two = list;
 	while (temp != NULL)
 	{
 		temp = temp->next;
-		check[l] = temp;
-		i = 0;
-		while (i < l)
+		two_t = two;
+		count++;
+		l = 0;
+		while (l < count)
 		{
-			if (check[i] == temp)
+			if (temp == two_t)
+			{
 				return (1);
-			i++;
+			}
+			two_t = two_t->next;
+			l++;
 		}
-		l++;
 	}
 	return (0);
 }
