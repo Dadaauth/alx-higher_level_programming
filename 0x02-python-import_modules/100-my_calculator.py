@@ -18,12 +18,15 @@ if __name__ == "__main__":
         exit(1)
     a = int(argv[1])
     b = int(argv[3])
-    match operator:
-        case '+':
-            print(f"{a} {operator} {b} = {add(a, b)}")
-        case '-':
-            print(f"{a} {operator} {b} = {sub(a, b)}")
-        case '*':
-            print(f"{a} {operator} {b} = {mul(a, b)}")
-        case '/':
-            print(f"{a} {operator} {b} = {div(a, b)}")
+    add_t = add(a, b)
+    sub_t = sub(a, b)
+    mul_t = mul(a, b)
+    div_t = div(a, b)
+    if operator == '+':
+        print("{0} {1} {2} = {3}".format(a, operator, b, add_t))
+    elif operator == '-':
+        print(f"{a} {operator} {b} = {sub(a, b)}")
+    elif operator == '*':
+        print(f"{a} {operator} {b} = {mul(a, b)}")
+    elif operator == '/':
+        print(f"{a} {operator} {b} = {div(a, b)}")
