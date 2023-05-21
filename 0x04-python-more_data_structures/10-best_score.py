@@ -8,7 +8,7 @@ def best_score(a_dictionary):
         score = a_dictionary[key]
         if score > prev:
             best_key = key
-        prev = score
+            prev = score
     return best_key
 
 
