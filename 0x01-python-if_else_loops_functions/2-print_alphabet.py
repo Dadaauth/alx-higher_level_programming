@@ -1,7 +1,3 @@
 #!/usr/bin/python3
-def printAlp(char):
-    while char != 'z':
-        print(f"{char}")
-        char = char + 1;
-
-printAlp('a')
+for i in range(97, 123):
+    print("{:s}".format(chr(i)), end='')
