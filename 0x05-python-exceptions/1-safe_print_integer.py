@@ -4,8 +4,6 @@ def safe_print_integer(value):
         print("{:d}".format(value))
         return True
     except ValueError:
-        print("{:d}".format(int(value)))
         return False
 
-
-# print(safe_print_integer(2342))
+# print(safe_print_integer("234dd2"))
