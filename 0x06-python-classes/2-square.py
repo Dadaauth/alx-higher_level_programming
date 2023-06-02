@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """
 A square module for defining squares
-created for alxse project completion
-
-Classes:
-    Square
+Not just squares
+    I have to work even harder
 """
 
 
