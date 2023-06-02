@@ -1,26 +1,9 @@
 #!/usr/bin/python3
 """
-
-This module is for holding classes like the square class
-for the construction of shapes. It has a lot of use cases which
-we will cover later. You can see some examples below..
-
-Example:
-    Below are examples of how you can use this module in your project
-        $ python3 1-square.py
-
-Once you are done with this module you will see how powerful hardwork
-can be
-
-Attributes:
-    None
-
-Todo:
-    * Work on the Square class
-    * Increase the functionality the square class has
-
-
+ This modules creates a new class called Square
+  and initializes t with a variable size
 """
+
 
 def Square:
     """
