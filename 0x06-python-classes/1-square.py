@@ -3,7 +3,7 @@
 A module created for Squares
 
 Classes:
-    Square
+    Square class
 """
 
 
