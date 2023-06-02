@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A module created for Squares
+A square module
 
 Classes:
     Square class
