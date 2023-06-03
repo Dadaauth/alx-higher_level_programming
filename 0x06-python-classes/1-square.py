@@ -2,6 +2,9 @@
 """
  This modules creates a new class called Square
   and initializes t with a variable size
+
+  :param self: a caller to the self object
+  :param size: the size value to add to the __size attribute
 """
 
 
