@@ -3,6 +3,8 @@
 This module initializes a private object variable
 with an opttional size
 """
+
+
 class Square:
     """
     the Square class, more information coming soon.
@@ -29,5 +31,3 @@ class Square:
 
     def area(self):
         return self.__size * self.__size
-
-
