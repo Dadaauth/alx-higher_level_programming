@@ -1,0 +1,28 @@
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> add_integer(1, "we")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer("str", 23)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> type(add_integer(12.3, 4)) == int
+True
+
+>>> add_integer(1, 3)
+4
+
+>>> add_integer(True, False)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(12)
+110
+
+>>> add_integer(-123, 1)
+-122
+
+>>> add_integer(-98)
+0
