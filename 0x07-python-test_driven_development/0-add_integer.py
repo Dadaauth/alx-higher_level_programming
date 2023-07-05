@@ -2,7 +2,6 @@
 A module for working with adding integers
 This module works for addition of two integers
 It also has error predictions and handling
-
 it has only one function
 hoping to add other functions though
 """
