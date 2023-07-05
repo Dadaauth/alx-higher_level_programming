@@ -9,6 +9,11 @@ Just use it right else see the consequence of great power
 
 
 def text_indentation(text):
+    """
+    a text indentation function
+    this is the only function in this while fil and module
+    and even in the whole package hahha
+    """
     if type(text) is not str:
         raise TypeError("text must be a string")
     prev = ""
