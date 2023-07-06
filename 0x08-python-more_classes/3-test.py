@@ -5,6 +5,8 @@ my_rect = r(2, 4)
 print("Area: {} - Perimeter: {}".format(my_rect.area(), my_rect.perimeter()))
 
 print("--")
+print(str(my_rect))
+print(repr(my_rect))
 
 my_rect.width = 32
 my_rect.height = 32
