@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""
-a module to create an empty class for Rectangle
+"""An empty rectangle class
 """
 
 
 class Rectangle:
-    """
-    An empty Rectangle class
+    """This is an empty rectangle class
+    created for alxse project
     """
     pass
