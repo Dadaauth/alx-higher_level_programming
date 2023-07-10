@@ -2,9 +2,36 @@
 
 >>> aList = MyList([12, 43, 1, 3, 14, 500, 94])
 
+>>> aList == [12, 43, 1, 3, 14, 500, 94]
+True
+
 >>> print(aList)
 [12, 43, 1, 3, 14, 500, 94]
 
 
 >>> aList.print_sorted()
 [1, 3, 12, 14, 43, 94, 500]
+
+
+>>> aList.append(-12)
+>>> aList.print_sorted()
+[-12, 1, 3, 12, 14, 43, 94, 500]
+
+
+>>> print(aList)
+[12, 43, 1, 3, 14, 500, 94, -12]
+
+>>> eList = MyList()
+
+>>> eList.print_sorted()
+[]
+
+>>> isinstance(aList, list)
+True
+
+>>> aList.print_sorted() == None
+[-12, 1, 3, 12, 14, 43, 94, 500]
+True
+
+>>> str(aList)
+'[12, 43, 1, 3, 14, 500, 94, -12]'
