@@ -1,0 +1,10 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> aList = MyList([12, 43, 1, 3, 14, 500, 94])
+
+>>> print(aList)
+[12, 43, 1, 3, 14, 500, 94]
+
+
+>>> aList.print_sorted()
+[1, 3, 12, 14, 43, 94, 500]
