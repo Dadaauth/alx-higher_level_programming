@@ -3,7 +3,6 @@
 handles the logic for gettign the attributes
 an object has in a class scope or namespace
 """
-import json
 
 
 def class_to_json(obj):
