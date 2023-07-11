@@ -7,6 +7,6 @@ import json
 
 def class_to_json(obj):
     """
-    returns the dict that works the magic
+    returns a list of the attributes an object of a class
     """
     return obj.__dict__
