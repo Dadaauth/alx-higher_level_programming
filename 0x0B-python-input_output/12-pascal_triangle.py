@@ -5,6 +5,10 @@ a module for creating pascal triangles
 
 
 def pascal_triangle(n):
+    """
+    a function that can create pascal triangles
+    and return them as a list
+    """
     full_list = []
     prev_list = []
     for a in range(1, n + 1):
