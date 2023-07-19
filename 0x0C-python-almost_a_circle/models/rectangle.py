@@ -16,6 +16,25 @@ class Rectangle(Base):
         init function documentation or the class and forgive
         this is the function that inititalizes the Rectangle class
         """
+        v_int = "{} must be an integer"
+        v_size = "{} must be > 0"
+        v_size_xy = "{} must be >= 0"
+        if not isinstance(width, int):
+            raise TypeError(v_int.format("width"))
+        if not isinstance(height, int):
+            raise TypeError(v_int.format("height"))
+        if not isinstance(x, int):
+            raise TypeError(v_int.format("x"))
+        if not isinstance(y, int):
+            raise TypeError(v_int.format("y"))
+        if width <= 0:
+            raise ValueError(v_size.format("width"))
+        if height <= 0:
+            raise ValueError(v_size.format("height"))
+        if x < 0:
+            raise ValueError(v_size_xy.format("x"))
+        if y < 0:
+            raise ValueError(v_size_xy.format("y"))
         self.__width = width
         self.__height = height
         self.__x = x
@@ -35,6 +54,10 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -46,6 +69,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -57,6 +84,10 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -68,4 +99,8 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        if not isinstance(value, int):
+            raise TypeError("y must not be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
