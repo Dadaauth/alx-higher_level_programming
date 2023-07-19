@@ -123,7 +123,11 @@ class Rectangle(Base):
                 ##
                 ##
         """
+        for _ in range(self.__y):
+            print()
         for _ in range(self.__height):
+            for _ in range(self.__x):
+                print(" ", end='')
             for _ in range(self.__width):
                 print("#", end='')
             print()
