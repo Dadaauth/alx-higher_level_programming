@@ -139,3 +139,14 @@ class Rectangle(Base):
         """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"\
                f" - {self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """
+        updates the rectangle instance attributes from a tuple of
+        arguments or *args
+        """
+        l_order = ["id", "width", "height", "x", "y"]
+        idx = 0
+        for arg in args:
+            setattr(self, l_order[idx], arg)
+            idx += 1
