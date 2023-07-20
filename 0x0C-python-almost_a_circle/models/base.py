@@ -22,15 +22,23 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
-        if len(list_dictionaries) == 0 or list_dictionaries is None:
+        """
+        returns the json representation of a list_dictionaries
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return json.dumps([])
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+        saves a list of instance of the parent class Base to a file
+        """
         new_l = []
-        for inst in list_objs:
-            new_l.append(inst.to_dictionary())
+        if list_objs is not None:
+            for inst in list_objs:
+                new_l.append(inst.to_dictionary())
         with open(f"{cls.__name__}.json", 'w') as f:
             f.write(cls.to_json_string(new_l))
