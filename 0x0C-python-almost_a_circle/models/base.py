@@ -14,7 +14,7 @@ class Base:
 
     def __init__(self, id=None):
         """
-        the initializatrion function of the BAse class
+        the initialization function of the Base class
         """
         if id is not None:
             self.id = id
@@ -26,3 +26,11 @@ class Base:
         if len(list_dictionaries) == 0 or list_dictionaries is None:
             return json.dumps([])
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        new_l = []
+        for inst in list_objs:
+            new_l.append(inst.to_dictionary())
+        with open(f"{cls.__name__}.json", 'w') as f:
+            f.write(cls.to_json_string(new_l))
