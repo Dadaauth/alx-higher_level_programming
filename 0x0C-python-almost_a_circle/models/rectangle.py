@@ -145,8 +145,8 @@ class Rectangle(Base):
         updates the rectangle instance attributes from a tuple of
         arguments or *args
         """
-        if args is None:
-            for key, value in kwargs.values:
+        if len(args) == 0 or args is None:
+            for key, value in kwargs.items():
                 setattr(self, key, value)
             return
         l_order = ["id", "width", "height", "x", "y"]
