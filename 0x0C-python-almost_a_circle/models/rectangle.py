@@ -156,6 +156,9 @@ class Rectangle(Base):
             idx += 1
 
     def to_dictionary(self):
+        """
+        returns the dictionary representation of the Rectangle instance
+        """
         return {
                 'id': self.id, 'width': self.width, 'height': self.height,
                 'x': self.x, 'y': self.y
