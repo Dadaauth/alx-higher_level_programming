@@ -154,3 +154,9 @@ class Rectangle(Base):
         for arg in args:
             setattr(self, l_order[idx], arg)
             idx += 1
+
+    def to_dictionary(self):
+        return {
+                'id': self.id, 'width': self.width, 'height': self.height,
+                'x': self.x, 'y': self.y
+            }

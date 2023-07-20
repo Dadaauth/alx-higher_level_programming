@@ -61,6 +61,12 @@ class Square(Rectangle):
                 setattr(self, l_order[idx], arg)
             idx += 1
 
+    def to_dictionary(self):
+        return {
+                'id': self.id, 'size': self.width,
+                'x': self.x, 'y': self.y
+            }
+
     def __str__(self):
         """
         changes the string representation of the Square class
