@@ -1,0 +1,20 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+>>> nm = BaseGeometry()
+
+>>> nm.integer_validator("age", -12)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+
+>>> nm.integer_validator("distance", "yeah")
+Traceback (most recent call last):
+TypeError: distance must be an integer
+
+
+>>> nm.integer_validator("yep", 120)
+
+>>> nm.integer_validator("oh", 0)
+Traceback (most recent call last):
+ValueError: oh must be greater than 0
