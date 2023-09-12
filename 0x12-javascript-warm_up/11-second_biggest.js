@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const newArg = process.argv.slice(2);
-for (idx in newArg) {
+for (const idx in newArg) {
   newArg[idx] = parseInt(newArg[idx]);
 }
 if (process.argv.length === 2) {
