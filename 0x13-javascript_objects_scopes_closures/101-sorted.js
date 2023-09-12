@@ -1,8 +1,9 @@
 #!/usr/bin/node
 const dict = require('./101-data').dict;
 const sortedDict = {};
-for (const [key, value] of Object.entries(dict)) {
-  if (value in Object.keys(sortedDict)) {
+for (const key in dict) {
+  const value = dict[key];
+  if (value in sortedDict) {
     sortedDict[value].push(key);
   } else {
     sortedDict[value] = [key];
