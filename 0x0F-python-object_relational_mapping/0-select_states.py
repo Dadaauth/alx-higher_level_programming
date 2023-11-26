@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 #TODO This is what I want to do here
 #FIXME Something to fix here.
 #HACK
