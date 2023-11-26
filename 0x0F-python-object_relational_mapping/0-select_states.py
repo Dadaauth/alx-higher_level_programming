@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 #TODO This is what I want to do here
+#FIXME Something to fix here.
+#HACK
 """
 This is a module documentation for my file
 """
