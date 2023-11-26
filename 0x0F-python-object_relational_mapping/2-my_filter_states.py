@@ -21,7 +21,7 @@ def sql_script() -> None:
     db = MySQLdb.connect(host='localhost', port=3306, user=username,
                          password=password, db=db_name)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE states.name = '{}' "
+    cur.execute("SELECT * FROM states WHERE BINARY states.name = '{}' "
                 "ORDER BY states.id".format(state_name))
     result = cur.fetchall()
     for row in result:
