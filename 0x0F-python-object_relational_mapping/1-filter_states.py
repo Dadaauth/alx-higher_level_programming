@@ -17,11 +17,11 @@ def sql_script() -> None:
     password = sys.argv[2]
     db_name = sys.argv[3]
 
-    db = MySQLdb.connect(host='localhost', port=3306,user=username,
+    db = MySQLdb.connect(host='localhost', port=3306, user=username,
                          password=password, db=db_name)
     cur = db.cursor()
-    # cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC")
-    cur.execute("SELECT * FROM states WHERE states.name LIKE 'N%' ORDER BY states.id")
+    cur.execute("SELECT * FROM states WHERE BINARY states.name LIKE 'N%'"
+                "ORDER BY states.id")
     result = cur.fetchall()
     for row in result:
         print(row)
