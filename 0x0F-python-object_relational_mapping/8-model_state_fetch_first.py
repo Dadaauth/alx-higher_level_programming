@@ -21,5 +21,8 @@ if __name__ == '__main__':
         stmt = select(State)
         result = session.scalars(stmt).first()
         # OR USE result = session.scalar(stmt)
-        print("{}: {}".format(result.id, result.name))
+        if result is not None:
+            print("{}: {}".format(result.id, result.name))
+        else:
+            print("Nothing")
     Base.metadata.create_all(engine)
