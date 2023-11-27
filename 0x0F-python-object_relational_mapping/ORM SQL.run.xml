@@ -3,7 +3,7 @@
     <option name="SCRIPT_TEXT" value="chmod u+x *.py; python3 *.py" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="$USER_HOME$/Documents/alx-higher_level_programming/0x0F-python-object_relational_mapping/rum.sh" />
-    <option name="SCRIPT_OPTIONS" value="model_state.py" />
+    <option name="SCRIPT_OPTIONS" value="7-model_state_fetch_all.py" />
     <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
     <option name="SCRIPT_WORKING_DIRECTORY" value="$USER_HOME$/Documents/alx-higher_level_programming/0x0F-python-object_relational_mapping" />
     <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
