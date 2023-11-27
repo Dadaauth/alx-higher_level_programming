@@ -19,3 +19,4 @@ if __name__ == '__main__':
         for result in session.scalars(stmt):
             print("{}: {}".format(result.id, result.name))
     Base.metadata.create_all(engine)
+
