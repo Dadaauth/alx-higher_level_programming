@@ -19,6 +19,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     with Session() as session:
         stmt = select(State)
-        result = session.scalar(stmt)
+        result = session.scalars(stmt).first()
+        # OR USE result = session.scalar(stmt)
         print("{}: {}".format(result.id, result.name))
     Base.metadata.create_all(engine)
