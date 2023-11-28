@@ -7,7 +7,7 @@ import sys
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
-# from model_city import City
+from model_city import City
 
 if __name__ == '__main__':
     username = sys.argv[1]
@@ -19,18 +19,18 @@ if __name__ == '__main__':
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     Base.metadata.create_all(engine)
-
-    # ~~~ SAME RESULT WITH CODE BELOW
-    with Session() as session:
-        stmt = select(State)
-        for result in session.scalars(stmt):
-            for city in result.cities:
-                print("{}: ({}) {}".format(result.name, city.id, city.name))
-    # ~~~ SAME RESULT WITH CODE BELOW
-
-    # OR USE THE CODE BELOW ==> SAME RESULT
-
+    #
+    # # ~~~ SAME RESULT WITH CODE BELOW
     # with Session() as session:
-    #     stmt = select(City).join(State).order_by(City.id)
+    #     stmt = select(State)
     #     for result in session.scalars(stmt):
-    #         print("{}: ({}) {}".format(result.states.name, result.id, result.name))
+    #         for city in result.cities:
+    #             print("{}: ({}) {}".format(result.name, city.id, city.name))
+    # # ~~~ SAME RESULT WITH CODE BELOW
+    #
+    # # OR USE THE CODE BELOW ==> SAME RESULT
+
+    with Session() as session:
+        stmt = select(City).join(State).order_by(City.id)
+        for result in session.scalars(stmt):
+            print("{}: ({}) {}".format(result.states.name, result.id, result.name))

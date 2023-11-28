@@ -17,4 +17,3 @@ class City(Base):
     state_id: Mapped[int] = mapped_column(ForeignKey("states.id"),
                                           nullable=False)
     # OR USE state_id = mapped_column(ForeignKey("states.id"), nullable=False)
-    states = relationship("State", back_populates="cities")

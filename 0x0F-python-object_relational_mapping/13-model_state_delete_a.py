@@ -22,6 +22,5 @@ if __name__ == '__main__':
     with Session() as session:
         stmt = select(State).where(text("BINARY name LIKE '%a%'"))
         for result in session.scalars(stmt):
-            print(result.name)
             session.delete(result)
         session.commit()

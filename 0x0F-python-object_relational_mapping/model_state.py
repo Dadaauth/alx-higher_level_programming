@@ -17,4 +17,3 @@ class State(Base):
     __tablename__ = "states"
     id: Mapped[int] = mapped_column(primary_key=True, nullable=False, autoincrement=True)
     name: Mapped[str] = mapped_column(String(128), nullable=False)
-    cities = relationship("City", back_populates="states")
