@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""
-This is a module documentation for my file
+"""This is a module documentation for my file
+Documentation for this module is written right here
+WHat exactly Do you want from us> Am really stressed out now!!!!!!
 """
 
 from sqlalchemy.orm import Mapped, mapped_column, declarative_base

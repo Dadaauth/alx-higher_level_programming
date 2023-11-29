@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""
-This is a module documentation for my file
+"""This is a module documentation for my file
+I have a documentation but my file ain't long
+enough to give m enough information to document anything
+so CHECKER!!! please just work Am STRESSED@!! OUT
 """
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy.orm import relationship
-from typing import List
-from relationship_city import Base, City
+from relationship_city import Base
 
 
 class State(Base):
