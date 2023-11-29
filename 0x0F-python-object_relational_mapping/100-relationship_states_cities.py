@@ -5,6 +5,7 @@ from the database
 Usage: ./100-relationship_states_cities.py <mysql username> /
                                            <mysql password> /
                                            <database name>
+Session
 """
 import sys
 from sqlalchemy import create_engine
