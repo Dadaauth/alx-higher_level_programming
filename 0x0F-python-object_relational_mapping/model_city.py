@@ -10,6 +10,8 @@ from sqlalchemy import String, ForeignKey
 
 
 class City(Base):
+    """My city class representing the cities table in the mysql DataBase
+    """
     __tablename__ = "cities"
     id: Mapped[int] = mapped_column(autoincrement=True, primary_key=True,
                                     nullable=False, unique=True)
