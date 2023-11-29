@@ -25,4 +25,5 @@ if __name__ == '__main__':
         for result in session.execute(stmt):
             city_obj = result[0]
             state_obj = result[1]
-            print("{}: ({}) {}".format(state_obj.name, city_obj.id, city_obj.name))
+            print("{}: ({}) {}"
+                  .format(state_obj.name, city_obj.id, city_obj.name))
