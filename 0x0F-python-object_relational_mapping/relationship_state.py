@@ -4,6 +4,7 @@ This is a module documentation for my file
 I have a documentation but my file ain't long
 enough to give m enough information to document anything
 so CHECKER!!! please just work Am STRESSED@!! OUT
+State Model Class Base
 """
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import String
