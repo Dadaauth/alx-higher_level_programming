@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This is a module documentation for my file
+"""
+This is a module documentation for my file
 I have a documentation but my file ain't long
 enough to give m enough information to document anything
 so CHECKER!!! please just work Am STRESSED@!! OUT
@@ -14,6 +15,8 @@ from relationship_city import Base
 class State(Base):
     """
     Documentation for State class
+    his is who dude do you know how to go
+    to the museum happy things
     """
     __tablename__ = "states"
     id: Mapped[int] = mapped_column(primary_key=True, nullable=False, autoincrement=True)
