@@ -1,3 +1,3 @@
 #!/bin/bash
 # sends a POST request with a file contents
-curl -s -X POST -d @$2 $1
+curl -sL -X POST -d $(cat $2) -H "Content-Type: application/json" $1
