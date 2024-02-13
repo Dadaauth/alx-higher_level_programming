@@ -14,7 +14,7 @@ def search(letter):
         if len(json_res) < 1:
             return 'No result'
         else:
-            return f'[{json_res.get('id')}] {json_res.get('name')}'
+            return f"[{json_res.get('id')}] {json_res.get('name')}"
     except requests.exceptions.JSONDecodeError:
         """here is a documentation"""
         return 'Not a valid JSON'
