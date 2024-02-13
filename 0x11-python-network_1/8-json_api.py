@@ -12,7 +12,7 @@ def search(letter):
         if len(json_res) < 1:
             return 'No result'
         else:
-            return f'[{json_res.get('id')}] {json_res.get('name')}'
+            return f'[{json_res.id}] {json_res.name}'
     except requests.exceptions.JSONDecodeError:
         return 'Not a valid JSON'
 
