@@ -1,0 +1,3 @@
+vim $1;
+chmod +x $1
+pycodestyle $1
