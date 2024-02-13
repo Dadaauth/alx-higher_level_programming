@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# sends a POST request to a passed URL with a parameter
+"""
+sends a POST request to a passed URL with a parameter"""
 import urllib
 import sys
 
