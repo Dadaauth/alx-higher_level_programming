@@ -9,11 +9,10 @@ def search(letter):
     r = requests.post('http://0.0.0.0:5000/search_user', data={'q': letter})
     try:
         json_res = r.json()
-        print(json_res)
         if len(json_res) < 1:
             return 'No result'
         else:
-            return f'[{json_res.id}] {json_res.name}'
+            return f'[{json_res.get('id')}] {json_res.get('name')}'
     except requests.exceptions.JSONDecodeError:
         return 'Not a valid JSON'
 
