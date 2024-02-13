@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Takes a letter and sends a POST request to a URL.
+"""
+Takes a letter and sends a POST request to a URL.
     We are using .get on the dictionary objects to avoid
 getting an error if the attribute is not found
 """
 import requests
-import requests.exceptions
 import sys
 
 
