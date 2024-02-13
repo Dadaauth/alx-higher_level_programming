@@ -10,8 +10,6 @@ def search(letter):
     r = requests.post('http://0.0.0.0:5000/search_user', data={'q': letter})
     try:
         """here is a documentation"""
-        if len(r.text) == 0:
-            return 'No result'
         json_res = r.json()
         if len(json_res) < 1:
             return 'No result'
