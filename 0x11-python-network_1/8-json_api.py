@@ -15,7 +15,7 @@ def search(letter):
             return 'No result'
         else:
             return f"[{json_res.get('id')}] {json_res.get('name')}"
-    except requests.exceptions.JSONDecodeError as e:
+    except requests.exceptions.RequestException as e:
         """here is a documentation"""
         return 'Not a valid JSON'
 
